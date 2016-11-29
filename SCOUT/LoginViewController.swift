@@ -8,24 +8,20 @@
 
 import UIKit
 import Firebase
-class MainViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     
     
     
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
+    let mainController = ProfileViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        self.performSegue(withIdentifier: "segLogView", sender: self)
-    }
-    @IBAction func regesterUser(_ sender: Any) {
-        self.performSegue(withIdentifier: "regView", sender: self)
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,11 +44,14 @@ class MainViewController: UIViewController {
             
         })
     }
+  
+   
+    @IBAction func NewUserRegester(_ sender: Any) {
+        self.performSegue(withIdentifier: "signUpSeg", sender: self)
 
-    @IBAction func NewRegistration(_ sender: Any) {
-        
-        
     }
+  
+
     func login(){
         FIRAuth.auth()?.signIn(withEmail: Username.text!, password: Password.text!, completion:{
             
@@ -63,8 +62,12 @@ class MainViewController: UIViewController {
             }
             else
             {
-                print("User has been logged in!")
-            }
+        
+            
+                _ = self.navigationController?.popViewController(animated: true)
+                
+                self.dismiss(animated: true, completion: nil)            }
+           
             
             
         
