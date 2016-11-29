@@ -9,21 +9,23 @@
 import Foundation
 import UIKit
 import Firebase
-class ModelPhotographerController: UIViewController {
-    var modelE = ModelSignUpController()
-    var photoE = PhotographerSignUpController()
+class ModelPhotographerController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var email: UITextField!
     var userName: String?
+    @IBOutlet weak var password: UITextField!
     var passwordEntered: String?
     var photographerUserName: String?
     var photographerPasswordEntered: String?
-    var accoutType = 1
-    var flag: String!
+    var accoutType: Int?
     
+    @IBOutlet weak var userimageView: UIImageView!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstView.isHidden = true
-        secondView.isHidden = false
+        
         // Do any additional setup after loading the view.
     }
     
@@ -31,20 +33,71 @@ class ModelPhotographerController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func choosePicture(_ sender: Any) {
+        //instantiates the UIImagePickerController
+        let imagePicker = UIImagePickerController()
+        
+        //sets sourceType of imagePicker
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        }
+        else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        //sets DetailViewController as the delegate for imagePicker
+        imagePicker.delegate = self
+        
+        //presents imagePicker modally
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            userimageView.contentMode = .scaleAspectFit
+            userimageView.image = pickedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //delegate protocol for the UIImagePickerController that is called when the user selects a media item
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print("imagePickerController(_:didFinishPickingMediaWithInfo:) delegate called.")
+        
+        //        for (key, value) in info {
+        //            print("key: \(key) value: \(value)")
+        //        }
+        
+        //info is a dictionary that contains information about the media (image) the user selected.
+        //Subscript the dictionary with the appropriate key to get the image selected by the user
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        //display the selected image on the imageView (by setting its image property)
+        userimageView.image = image
+        
+        //item.image = image
+        
+        //store the selected image in the imageStore (which has a cache to store images)
+     
+        //dismiss the view of imagePicker (that was earlier presented modally)
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func indexHasChanged(_ sender: UISegmentedControl) {
+        
         
         if sender.selectedSegmentIndex == 0
         
         {
-            firstView.isHidden = false
-            secondView.isHidden = true
+         
             accoutType = 0
+            print(accoutType!)
         }
         else
         {
      
-            firstView.isHidden = true
-            secondView.isHidden = false
+         
             accoutType = 1
     
         }
@@ -52,26 +105,12 @@ class ModelPhotographerController: UIViewController {
     }
    
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if  segue.identifier == "modelSeg"
-        {
-            modelE = (segue.destination as? ModelSignUpController)!
-            flag = "model"
-        }
-        else if segue.identifier == "photogSeg"
-        {
-            photoE = (segue.destination as? PhotographerSignUpController)!
-            flag = "photographer"
-        }
-    }
+   
     @IBAction func signUpButton(_ sender: Any) {
         
-        if (accoutType == 0)
-        {
+    
         
-        FIRAuth.auth()?.createUser(withEmail: modelE.modelEmail.text!, password: modelE.modelPassword.text!, completion:{
+        FIRAuth.auth()?.createUser(withEmail: self.email.text!, password: self.password.text!, completion:{
             
             user, error in
             
@@ -87,64 +126,49 @@ class ModelPhotographerController: UIViewController {
                 print("User created!")
             
                 let ref = FIRDatabase.database().reference(fromURL: "https://scout-c335b.firebaseio.com/")
-                let Values = ["email": self.modelE.modelEmail.text!, "name": self.modelE.modelName.text!]
-                let usersReference = ref.child("users").child("models").child(uid)
                 
-                usersReference.updateChildValues(Values, withCompletionBlock: {(err,ref)
-                    in
-                    if err != nil{
-                        print(err as Any)
-                        return
-                    }
-                    print("user has been added to database")
-                    
-                    
-                })
-
-                self.goBackToSignInPage(self)
-            }
-            
-            
-        })
-        }
-        else
-        {
-            FIRAuth.auth()?.createUser(withEmail: photoE.photographerEmail.text!, password: photoE.phtographerPassword.text!, completion:{
-                
-                user, error in
-                
-                if error != nil{
-                    print("sign up error")
-                }
-                else
+                if (self.accoutType == 0)
                 {
-                    print("User created!")
-                    guard let uid = user?.uid else {
-                        return
-                    }
-                    
-                    print("User created!")
-                    
-                    let ref = FIRDatabase.database().reference(fromURL: "https://scout-c335b.firebaseio.com/")
-                    let Values = ["email": self.photoE.photographerEmail.text!, "name": self.photoE.photographerName.text!]
-                    let usersReference = ref.child("users").child("photographers").child(uid)
+                
+                    let Values = ["email": self.email.text!, "name": self.username.text!, "usertype": "model"]
+                    let usersReference = ref.child("users").child(uid)
                     
                     usersReference.updateChildValues(Values, withCompletionBlock: {(err,ref)
                         in
                         if err != nil{
-                            print(err as Any)
+                            print(err)
                             return
                         }
                         print("user has been added to database")
                         
                         
                     })
-                    self.goBackToSignInPage(self)
                 }
-                
-                
-            })
-        }
+                else
+                {
+                    let Values = ["email": self.email.text!, "name": self.username.text!, "usertype": "photographer"]
+                    let usersReference = ref.child("users").child(uid)
+                    
+                    usersReference.updateChildValues(Values, withCompletionBlock: {(err,ref)
+                        in
+                        if err != nil{
+                            print(err)
+                            return
+                        }
+                        print("user has been added to database")
+                        
+                        
+                    })
+                }
+
+
+                self.goBackToSignInPage(self)
+            }
+            
+            
+        })
+        
+
     }
     
 

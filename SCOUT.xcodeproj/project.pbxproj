@@ -15,12 +15,12 @@
 		764B816A1DD4F8A700850CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764B81681DD4F8A700850CDF /* LaunchScreen.storyboard */; };
 		764B81751DD4F8A800850CDF /* SCOUTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B81741DD4F8A800850CDF /* SCOUTTests.swift */; };
 		764B81801DD4F8A800850CDF /* SCOUTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B817F1DD4F8A800850CDF /* SCOUTUITests.swift */; };
+		764B818E1DD4F8EA00850CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 764B818D1DD4F8EA00850CDF /* GoogleService-Info.plist */; };
+		76E579541DD544D000582E84 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E579531DD544D000582E84 /* MainViewController.swift */; };
 		76E5795A1DD6E10800582E84 /* ModelPhotographerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E579591DD6E10800582E84 /* ModelPhotographerViewController.swift */; };
-		76E5795E1DD95CBB00582E84 /* ModelSignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E5795D1DD95CBB00582E84 /* ModelSignUpController.swift */; };
-		76E7DD7F1DDA7A49004437CA /* PhotographerSignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD7E1DDA7A49004437CA /* PhotographerSignUpController.swift */; };
-		8824677E1DECE03200978EF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824677D1DECE03200978EF1 /* ProfileViewController.swift */; };
-		883F2E771DED245200F845BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 883F2E761DED245200F845BC /* GoogleService-Info.plist */; };
-		883F2E7B1DED2B3400F845BC /* images in Resources */ = {isa = PBXBuildFile; fileRef = 883F2E7A1DED2B3400F845BC /* images */; };
+		76E7DD811DEA475F004437CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD801DEA475F004437CA /* User.swift */; };
+		76E7DD831DEA76D7004437CA /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD821DEA76D7004437CA /* UserProfileController.swift */; };
+		76E7DD851DED19F5004437CA /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD841DED19F5004437CA /* ImageStore.swift */; };
 		E902D33855C90B56A0DA4BA8 /* Pods_SCOUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF1D261DBCCB75A28A9742A /* Pods_SCOUT.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,12 +58,12 @@
 		764B817B1DD4F8A800850CDF /* SCOUTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCOUTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		764B817F1DD4F8A800850CDF /* SCOUTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCOUTUITests.swift; sourceTree = "<group>"; };
 		764B81811DD4F8A800850CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		764B818D1DD4F8EA00850CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		76E579531DD544D000582E84 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		76E579591DD6E10800582E84 /* ModelPhotographerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelPhotographerViewController.swift; sourceTree = "<group>"; };
-		76E5795D1DD95CBB00582E84 /* ModelSignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSignUpController.swift; sourceTree = "<group>"; };
-		76E7DD7E1DDA7A49004437CA /* PhotographerSignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographerSignUpController.swift; sourceTree = "<group>"; };
-		8824677D1DECE03200978EF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		883F2E761DED245200F845BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		883F2E7A1DED2B3400F845BC /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		76E7DD801DEA475F004437CA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		76E7DD821DEA76D7004437CA /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		76E7DD841DED19F5004437CA /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		D8C964DD0AE169E01EF9DEB6 /* Pods-SCOUT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCOUT.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +101,6 @@
 				764B817E1DD4F8A800850CDF /* SCOUTUITests */,
 				764B815A1DD4F8A700850CDF /* Products */,
 				F529414A81944D5F323A84E6 /* Pods */,
-				883F2E7A1DED2B3400F845BC /* images */,
 				A97B4969BA39D50B4F65EE46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -119,14 +118,18 @@
 		764B815B1DD4F8A700850CDF /* SCOUT */ = {
 			isa = PBXGroup;
 			children = (
+				764B818D1DD4F8EA00850CDF /* GoogleService-Info.plist */,
 				764B815C1DD4F8A700850CDF /* AppDelegate.swift */,
-				8824677D1DECE03200978EF1 /* ProfileViewController.swift */,
-				8824677C1DECDFEC00978EF1 /* Login/Sign Up */,
+				764B815E1DD4F8A700850CDF /* LoginViewController.swift */,
+				76E579531DD544D000582E84 /* MainViewController.swift */,
 				764B81601DD4F8A700850CDF /* Main.storyboard */,
+				76E7DD821DEA76D7004437CA /* UserProfileController.swift */,
+				76E7DD801DEA475F004437CA /* User.swift */,
+				76E579591DD6E10800582E84 /* ModelPhotographerViewController.swift */,
+				76E7DD841DED19F5004437CA /* ImageStore.swift */,
 				764B81661DD4F8A700850CDF /* Assets.xcassets */,
 				764B81681DD4F8A700850CDF /* LaunchScreen.storyboard */,
 				764B816B1DD4F8A700850CDF /* Info.plist */,
-				883F2E761DED245200F845BC /* GoogleService-Info.plist */,
 				764B81631DD4F8A700850CDF /* SCOUT.xcdatamodeld */,
 			);
 			path = SCOUT;
@@ -148,17 +151,6 @@
 				764B81811DD4F8A800850CDF /* Info.plist */,
 			);
 			path = SCOUTUITests;
-			sourceTree = "<group>";
-		};
-		8824677C1DECDFEC00978EF1 /* Login/Sign Up */ = {
-			isa = PBXGroup;
-			children = (
-				764B815E1DD4F8A700850CDF /* LoginViewController.swift */,
-				76E7DD7E1DDA7A49004437CA /* PhotographerSignUpController.swift */,
-				76E5795D1DD95CBB00582E84 /* ModelSignUpController.swift */,
-				76E579591DD6E10800582E84 /* ModelPhotographerViewController.swift */,
-			);
-			name = "Login/Sign Up";
 			sourceTree = "<group>";
 		};
 		A97B4969BA39D50B4F65EE46 /* Frameworks */ = {
@@ -185,15 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 764B81841DD4F8A800850CDF /* Build configuration list for PBXNativeTarget "SCOUT" */;
 			buildPhases = (
-				BA0A54183E22740708E6BE2E /* 📦 Check Pods Manifest.lock */,
 				0DAA3AD76F26BE830D5159F4 /* [CP] Check Pods Manifest.lock */,
 				764B81551DD4F8A700850CDF /* Sources */,
 				764B81561DD4F8A700850CDF /* Frameworks */,
 				764B81571DD4F8A700850CDF /* Resources */,
 				A0938CE23780480B2250520A /* [CP] Embed Pods Frameworks */,
 				3A2136ADA9A405C8C1E3EA27 /* [CP] Copy Pods Resources */,
-				A1126BE0D16573743BD33908 /* 📦 Embed Pods Frameworks */,
-				A22109944D7B2801B8E5C140 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				764B816A1DD4F8A700850CDF /* LaunchScreen.storyboard in Resources */,
-				883F2E771DED245200F845BC /* GoogleService-Info.plist in Resources */,
+				764B818E1DD4F8EA00850CDF /* GoogleService-Info.plist in Resources */,
 				764B81671DD4F8A700850CDF /* Assets.xcassets in Resources */,
 				764B81621DD4F8A700850CDF /* Main.storyboard in Resources */,
 			);
@@ -302,7 +291,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				883F2E7B1DED2B3400F845BC /* images in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,51 +349,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A1126BE0D16573743BD33908 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A22109944D7B2801B8E5C140 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA0A54183E22740708E6BE2E /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -414,12 +357,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				76E5795A1DD6E10800582E84 /* ModelPhotographerViewController.swift in Sources */,
-				76E5795E1DD95CBB00582E84 /* ModelSignUpController.swift in Sources */,
 				764B815F1DD4F8A700850CDF /* LoginViewController.swift in Sources */,
-				76E7DD7F1DDA7A49004437CA /* PhotographerSignUpController.swift in Sources */,
+				76E7DD851DED19F5004437CA /* ImageStore.swift in Sources */,
+				76E7DD811DEA475F004437CA /* User.swift in Sources */,
 				764B815D1DD4F8A700850CDF /* AppDelegate.swift in Sources */,
 				764B81651DD4F8A700850CDF /* SCOUT.xcdatamodeld in Sources */,
-				8824677E1DECE03200978EF1 /* ProfileViewController.swift in Sources */,
+				76E579541DD544D000582E84 /* MainViewController.swift in Sources */,
+				76E7DD831DEA76D7004437CA /* UserProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
