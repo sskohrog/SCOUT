@@ -11,39 +11,65 @@
     </dependencies>
     <scenes>
         <!--Main View Controller-->
-        <scene sceneID="iTP-cA-xH0">
+        <scene sceneID="hD3-Cs-nO3">
             <objects>
-                <viewController id="Vw0-oa-Srb" customClass="MainViewController" customModule="SCOUT" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ESM-mX-6s3"/>
-                        <viewControllerLayoutGuide type="bottom" id="Q2v-Fw-U50"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="a1p-eY-bcA">
+                <tableViewController id="zsa-X3-DM9" customClass="MainViewController" customModule="SCOUT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="r3q-wF-VYG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="o2v-Dt-SQn">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="6GF-e0-fNd">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oh7-1f-f8k">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Out">
-                                    <color key="titleColor" red="0.52156865600000002" green="0.52156865600000002" blue="0.52156865600000002" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="signOut:" destination="Vw0-oa-Srb" eventType="touchUpInside" id="Hi1-jh-13T"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="80" id="uzo-cq-bZA">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uzo-cq-bZA" id="d2F-Lh-N57">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sophie Kohrogi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtY-Rn-ga2">
+                                            <rect key="frame" x="249" y="14" width="117" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="User_Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Pe6-85-hp3">
+                                            <rect key="frame" x="17" y="7" width="65" height="65"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wks-qI-gSt">
+                                            <rect key="frame" x="314" y="46" width="48" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qtY-Rn-ga2" firstAttribute="trailing" secondItem="d2F-Lh-N57" secondAttribute="trailingMargin" constant="5" id="2MD-Pu-zvA"/>
+                                        <constraint firstItem="wks-qI-gSt" firstAttribute="top" secondItem="qtY-Rn-ga2" secondAttribute="bottom" constant="11" id="8PZ-r5-riC"/>
+                                        <constraint firstItem="qtY-Rn-ga2" firstAttribute="top" secondItem="d2F-Lh-N57" secondAttribute="topMargin" constant="6" id="9vF-lB-0n7"/>
+                                        <constraint firstItem="wks-qI-gSt" firstAttribute="leading" secondItem="Pe6-85-hp3" secondAttribute="trailing" constant="232" id="JlA-fE-Nth"/>
+                                        <constraint firstItem="wks-qI-gSt" firstAttribute="trailing" secondItem="d2F-Lh-N57" secondAttribute="trailingMargin" constant="5" id="L8W-vL-b1w"/>
+                                        <constraint firstItem="Pe6-85-hp3" firstAttribute="leading" secondItem="d2F-Lh-N57" secondAttribute="leading" constant="17" id="R8d-ol-PD0"/>
+                                        <constraint firstItem="Pe6-85-hp3" firstAttribute="top" secondItem="d2F-Lh-N57" secondAttribute="top" constant="7" id="amA-NW-EzS"/>
+                                        <constraint firstAttribute="bottom" secondItem="Pe6-85-hp3" secondAttribute="bottom" constant="7" id="oTK-tZ-ibU"/>
+                                        <constraint firstItem="qtY-Rn-ga2" firstAttribute="leading" secondItem="Pe6-85-hp3" secondAttribute="trailing" constant="167" id="x3k-r9-XCn"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wks-qI-gSt" secondAttribute="bottom" constant="4" id="ytL-2E-1wb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zsa-X3-DM9" id="LMY-2i-a5h"/>
+                            <outlet property="delegate" destination="zsa-X3-DM9" id="Fny-Sd-TLS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="l26-ev-gAK"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segLogView" id="66K-Xw-mUg"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" id="1LZ-Qp-FIC"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xMW-Fb-CbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLP-93-D9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276" y="112.89355322338831"/>
+            <point key="canvasLocation" x="2352.8000000000002" y="105.69715142428787"/>
         </scene>
         <!--User Profile Controller-->
         <scene sceneID="ZGf-rY-vhp">
@@ -105,7 +131,6 @@
                             <constraint firstItem="Net-Ec-4EQ" firstAttribute="centerX" secondItem="qUV-a6-c89" secondAttribute="centerX" id="dcI-g5-raG"/>
                             <constraint firstItem="xOS-5c-q2R" firstAttribute="top" secondItem="Rb6-6c-wot" secondAttribute="bottom" constant="12" id="jCP-Qg-wE4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rb6-6c-wot" secondAttribute="trailing" constant="16" id="piU-yx-MLG"/>
-                            <constraint firstItem="Rb6-6c-wot" firstAttribute="leading" secondItem="Uyx-RC-uiv" secondAttribute="trailing" constant="60" id="sWl-I3-GDf"/>
                             <constraint firstItem="Uyx-RC-uiv" firstAttribute="top" secondItem="e8X-Lp-oEj" secondAttribute="bottom" constant="4" id="yTp-FU-DLl"/>
                         </constraints>
                     </view>
@@ -118,9 +143,6 @@
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" red="0.52156865600000002" green="0.52156865600000002" blue="0.52156865600000002" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="signOut:" destination="Vw0-oa-Srb" eventType="touchUpInside" id="B6k-RW-b2L"/>
-                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -270,9 +292,6 @@
                             <rect key="frame" x="276" y="7" width="83" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="SIgn Out"/>
-                            <connections>
-                                <action selector="signOut:" destination="Vw0-oa-Srb" eventType="touchUpInside" id="DUG-dV-q97"/>
-                            </connections>
                         </button>
                     </barButtonItem>
                 </navigationItem>
@@ -417,7 +436,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AEC-lZ-LMK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="KnM-6p-avP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HXf-67-0WD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HXf-67-0WD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -427,7 +446,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Vw0-oa-Srb" kind="relationship" relationship="rootViewController" id="cbD-kd-ud5"/>
+                        <segue destination="zsa-X3-DM9" kind="relationship" relationship="rootViewController" id="Ft8-HB-Vbe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGF-lp-YnT" userLabel="First Responder" sceneMemberID="firstResponder"/>

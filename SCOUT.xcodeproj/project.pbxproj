@@ -21,6 +21,7 @@
 		76E7DD811DEA475F004437CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD801DEA475F004437CA /* User.swift */; };
 		76E7DD831DEA76D7004437CA /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD821DEA76D7004437CA /* UserProfileController.swift */; };
 		76E7DD851DED19F5004437CA /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD841DED19F5004437CA /* ImageStore.swift */; };
+		88F452E41DEF76AB001CFC47 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F452E31DEF76AB001CFC47 /* UserCell.swift */; };
 		E902D33855C90B56A0DA4BA8 /* Pods_SCOUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF1D261DBCCB75A28A9742A /* Pods_SCOUT.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		76E7DD801DEA475F004437CA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		76E7DD821DEA76D7004437CA /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		76E7DD841DED19F5004437CA /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		88F452E31DEF76AB001CFC47 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		D8C964DD0AE169E01EF9DEB6 /* Pods-SCOUT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCOUT.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 			children = (
 				76E7DD821DEA76D7004437CA /* UserProfileController.swift */,
 				76E7DD801DEA475F004437CA /* User.swift */,
+				88F452E31DEF76AB001CFC47 /* UserCell.swift */,
 			);
 			name = USER;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				76E7DD851DED19F5004437CA /* ImageStore.swift in Sources */,
 				76E7DD811DEA475F004437CA /* User.swift in Sources */,
 				764B815D1DD4F8A700850CDF /* AppDelegate.swift in Sources */,
+				88F452E41DEF76AB001CFC47 /* UserCell.swift in Sources */,
 				764B81651DD4F8A700850CDF /* SCOUT.xcdatamodeld in Sources */,
 				76E579541DD544D000582E84 /* MainViewController.swift in Sources */,
 				76E7DD831DEA76D7004437CA /* UserProfileController.swift in Sources */,
