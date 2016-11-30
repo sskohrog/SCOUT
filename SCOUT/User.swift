@@ -17,6 +17,7 @@ struct User{
     var email: String!
     var usertypee: String!
     var ref: FIRDatabaseReference?
+    var userprofileimage: String!
     var key: String
     
     
@@ -28,6 +29,7 @@ struct User{
         username = snapshotValue?["name"] as? String
         email = snapshotValue?["email"] as? String
         usertypee = snapshotValue?["usertype"] as? String
+        userprofileimage = snapshotValue?["profileImageUrl"] as? String
         ref = snapshot.ref
     }
 }

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SCOUT/ModelPhotographerViewController.swift"
-            timestampString = "502078300.596581"
+            timestampString = "502100272.778284"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "signUpButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,16 +42,16 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SCOUT/ModelPhotographerViewController.swift"
-            timestampString = "502055524.678588"
+            timestampString = "502100272.778284"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "ModelPhotographerController"
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SCOUT.ModelPhotographerController.accoutType.getter : Swift.Int"
@@ -66,7 +66,7 @@
                   offsetFromSymbolStart = "19">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SCOUT.ModelPhotographerController.accoutType.setter : Swift.Int"
@@ -81,7 +81,7 @@
                   offsetFromSymbolStart = "23">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SCOUT.ModelPhotographerController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; SCOUT.ModelPhotographerController"
@@ -96,7 +96,7 @@
                   offsetFromSymbolStart = "640">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SCOUT.ModelPhotographerController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;SCOUT.ModelPhotographerController&gt;"
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SCOUT/ModelPhotographerViewController.swift"
-            timestampString = "502075536.846743"
+            timestampString = "502100272.778284"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SCOUT/ModelPhotographerViewController.swift"
-            timestampString = "502078300.596581"
+            timestampString = "502100272.778284"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "imagePickerController(picker:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -152,12 +152,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SCOUT/ModelPhotographerViewController.swift"
-            timestampString = "502078252.993735"
+            timestampString = "502100272.778284"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SCOUT/UserProfileController.swift"
+            timestampString = "502153181.969383"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

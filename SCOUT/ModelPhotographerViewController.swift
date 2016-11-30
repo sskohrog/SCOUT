@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseStorage
 import Firebase
 class ModelPhotographerController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -18,8 +19,8 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
     var passwordEntered: String?
     var photographerUserName: String?
     var photographerPasswordEntered: String?
-    var accoutType: Int?
-    
+    var accoutType = "photographer"
+    var userImage: UIImage!
     @IBOutlet weak var userimageView: UIImageView!
     
 
@@ -79,7 +80,7 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
         //item.image = image
         
         //store the selected image in the imageStore (which has a cache to store images)
-     
+        self.userImage = image
         //dismiss the view of imagePicker (that was earlier presented modally)
         dismiss(animated: true, completion: nil)
     }
@@ -91,14 +92,14 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
         
         {
          
-            accoutType = 0
-            print(accoutType!)
+            accoutType = "model"
+            
         }
         else
         {
      
          
-            accoutType = 1
+            accoutType = "photographer"
     
         }
 
@@ -122,56 +123,52 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
                 guard let uid = user?.uid else {
                     return
                 }
+                let  imageName = NSUUID().uuidString
+                let storageRef = FIRStorage.storage().reference().child("\(imageName).png")
+                if let uploadData = UIImagePNGRepresentation(self.userImage!){
+                    storageRef.put(uploadData, metadata: nil, completion: {
+                        (metadata, erorr) in
+                        
+                        if error != nil{
+                            print(error)
+                            return
+                        }
+                        if let profileImageUrl = metadata?.downloadURL()?.absoluteString{
+                            let values = ["email": self.email.text!, "name": self.username.text!, "usertype": self.accoutType, "profileImageUrl": profileImageUrl]
+                            self.registerUserIntoDatabasewithUID(uid: uid, values: values)
+                        }
+                        
+                    })
+                }
                 
                 print("User created!")
-            
-                let ref = FIRDatabase.database().reference(fromURL: "https://scout-c335b.firebaseio.com/")
-                
-                if (self.accoutType == 0)
-                {
-                
-                    let Values = ["email": self.email.text!, "name": self.username.text!, "usertype": "model"]
-                    let usersReference = ref.child("users").child(uid)
-                    
-                    usersReference.updateChildValues(Values, withCompletionBlock: {(err,ref)
-                        in
-                        if err != nil{
-                            print(err)
-                            return
-                        }
-                        print("user has been added to database")
-                        
-                        
-                    })
-                }
-                else
-                {
-                    let Values = ["email": self.email.text!, "name": self.username.text!, "usertype": "photographer"]
-                    let usersReference = ref.child("users").child(uid)
-                    
-                    usersReference.updateChildValues(Values, withCompletionBlock: {(err,ref)
-                        in
-                        if err != nil{
-                            print(err)
-                            return
-                        }
-                        print("user has been added to database")
-                        
-                        
-                    })
-                }
-
-
-                self.goBackToSignInPage(self)
+            self.goBackToSignInPage(self)
             }
+            
+        })
+        
+    }
+    
+    private func registerUserIntoDatabasewithUID(uid: String, values:[String: Any])
+    {
+        let ref = FIRDatabase.database().reference(fromURL: "https://scout-c335b.firebaseio.com/")
+        
+        
+        let usersReference = ref.child("users").child(uid)
+        
+        usersReference.updateChildValues(values, withCompletionBlock: {(err,ref)
+            in
+            if err != nil{
+                print(err)
+                return
+            }
+            print("user has been added to database")
             
             
         })
         
-
+        
     }
-    
-
  
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var firstView: UIView!
