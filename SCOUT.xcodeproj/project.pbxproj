@@ -120,13 +120,12 @@
 			children = (
 				764B818D1DD4F8EA00850CDF /* GoogleService-Info.plist */,
 				764B815C1DD4F8A700850CDF /* AppDelegate.swift */,
-				764B815E1DD4F8A700850CDF /* LoginViewController.swift */,
 				76E579531DD544D000582E84 /* MainViewController.swift */,
-				764B81601DD4F8A700850CDF /* Main.storyboard */,
-				76E7DD821DEA76D7004437CA /* UserProfileController.swift */,
-				76E7DD801DEA475F004437CA /* User.swift */,
+				764B815E1DD4F8A700850CDF /* LoginViewController.swift */,
 				76E579591DD6E10800582E84 /* ModelPhotographerViewController.swift */,
+				88F452E01DEF2DAA001CFC47 /* USER */,
 				76E7DD841DED19F5004437CA /* ImageStore.swift */,
+				764B81601DD4F8A700850CDF /* Main.storyboard */,
 				764B81661DD4F8A700850CDF /* Assets.xcassets */,
 				764B81681DD4F8A700850CDF /* LaunchScreen.storyboard */,
 				764B816B1DD4F8A700850CDF /* Info.plist */,
@@ -151,6 +150,15 @@
 				764B81811DD4F8A800850CDF /* Info.plist */,
 			);
 			path = SCOUTUITests;
+			sourceTree = "<group>";
+		};
+		88F452E01DEF2DAA001CFC47 /* USER */ = {
+			isa = PBXGroup;
+			children = (
+				76E7DD821DEA76D7004437CA /* UserProfileController.swift */,
+				76E7DD801DEA475F004437CA /* User.swift */,
+			);
+			name = USER;
 			sourceTree = "<group>";
 		};
 		A97B4969BA39D50B4F65EE46 /* Frameworks */ = {
