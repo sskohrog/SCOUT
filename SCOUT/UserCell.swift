@@ -9,9 +9,12 @@
 import UIKit
 
 class UserCell: UITableViewCell {
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var userTypeLabel: UILabel!
-    @IBOutlet var userImg: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+   
+    @IBOutlet weak var userTypeLabel: UILabel!
+   
+   
+    @IBOutlet weak var userImage: UIImageView!
     
     func setLabels() {
         let nameFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
