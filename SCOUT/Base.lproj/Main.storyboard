@@ -164,7 +164,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AEC-lZ-LMK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="KnM-6p-avP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HXf-67-0WD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HXf-67-0WD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69123677289999996" green="0.87332099080000003" blue="0.88157720429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
