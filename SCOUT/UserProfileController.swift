@@ -16,12 +16,9 @@ class UserProfileController: UIViewController {
  
     
     @IBOutlet weak var usertype: UILabel!
-   
+    @IBOutlet weak var email: UILabel!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userprofpic: UIImageView!
-
-  
-    @IBOutlet weak var email: UILabel!
 
  
 
@@ -42,6 +39,8 @@ class UserProfileController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         if FIRAuth.auth()?.currentUser == nil{
             
@@ -55,7 +54,7 @@ class UserProfileController: UIViewController {
                 DispatchQueue.main.async {
                     let userr = User(snapshot: snapshot)
                     self.username.text = userr.username
-                    //self.email.text = userr.email
+                    self.email.text = userr.email
                     self.usertype.text = userr.usertypee
                     
                     if let profileImageUrl = userr.userprofileimage{

@@ -15,17 +15,16 @@
 		764B816A1DD4F8A700850CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764B81681DD4F8A700850CDF /* LaunchScreen.storyboard */; };
 		764B81751DD4F8A800850CDF /* SCOUTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B81741DD4F8A800850CDF /* SCOUTTests.swift */; };
 		764B81801DD4F8A800850CDF /* SCOUTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B817F1DD4F8A800850CDF /* SCOUTUITests.swift */; };
-		764B818E1DD4F8EA00850CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 764B818D1DD4F8EA00850CDF /* GoogleService-Info.plist */; };
 		76E579541DD544D000582E84 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E579531DD544D000582E84 /* MainViewController.swift */; };
 		76E5795A1DD6E10800582E84 /* ModelPhotographerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E579591DD6E10800582E84 /* ModelPhotographerViewController.swift */; };
 		76E7DD811DEA475F004437CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD801DEA475F004437CA /* User.swift */; };
 		76E7DD831DEA76D7004437CA /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD821DEA76D7004437CA /* UserProfileController.swift */; };
 		76E7DD851DED19F5004437CA /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD841DED19F5004437CA /* ImageStore.swift */; };
-		76E7DD881DF0C52C004437CA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD871DF0C52C004437CA /* UserCell.swift */; };
 		76E7DD971DF14044004437CA /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD941DF14044004437CA /* DraggableView.swift */; };
 		76E7DD981DF14044004437CA /* DraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD951DF14044004437CA /* DraggableViewBackground.swift */; };
 		76E7DD991DF14044004437CA /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD961DF14044004437CA /* OverlayView.swift */; };
-		76E7DD9C1DF1431E004437CA /* super-mario-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E7DD9B1DF1431E004437CA /* super-mario-03.png */; };
+		88773AA71DF360CE0041A094 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88773AA61DF360CE0041A094 /* GoogleService-Info.plist */; };
+		88D5D0E11DF3516800D21A03 /* MessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5D0E01DF3516800D21A03 /* MessengerViewController.swift */; };
 		E902D33855C90B56A0DA4BA8 /* Pods_SCOUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF1D261DBCCB75A28A9742A /* Pods_SCOUT.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,18 +62,17 @@
 		764B817B1DD4F8A800850CDF /* SCOUTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCOUTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		764B817F1DD4F8A800850CDF /* SCOUTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCOUTUITests.swift; sourceTree = "<group>"; };
 		764B81811DD4F8A800850CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		764B818D1DD4F8EA00850CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76E579531DD544D000582E84 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		76E579591DD6E10800582E84 /* ModelPhotographerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelPhotographerViewController.swift; sourceTree = "<group>"; };
 		76E7DD801DEA475F004437CA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		76E7DD821DEA76D7004437CA /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		76E7DD841DED19F5004437CA /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		76E7DD861DEE7767004437CA /* SCOUT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SCOUT.entitlements; sourceTree = "<group>"; };
-		76E7DD871DF0C52C004437CA /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		76E7DD941DF14044004437CA /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		76E7DD951DF14044004437CA /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
 		76E7DD961DF14044004437CA /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
-		76E7DD9B1DF1431E004437CA /* super-mario-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "super-mario-03.png"; sourceTree = "<group>"; };
+		88773AA61DF360CE0041A094 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88D5D0E01DF3516800D21A03 /* MessengerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerViewController.swift; sourceTree = "<group>"; };
 		D8C964DD0AE169E01EF9DEB6 /* Pods-SCOUT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCOUT.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,20 +127,18 @@
 		764B815B1DD4F8A700850CDF /* SCOUT */ = {
 			isa = PBXGroup;
 			children = (
-				76E7DD9A1DF140EC004437CA /* DraggableCards */,
 				76E7DD861DEE7767004437CA /* SCOUT.entitlements */,
-				764B818D1DD4F8EA00850CDF /* GoogleService-Info.plist */,
 				764B815C1DD4F8A700850CDF /* AppDelegate.swift */,
+				764B81601DD4F8A700850CDF /* Main.storyboard */,
 				764B815E1DD4F8A700850CDF /* LoginViewController.swift */,
 				76E579531DD544D000582E84 /* MainViewController.swift */,
-				76E7DD871DF0C52C004437CA /* UserCell.swift */,
-				764B81601DD4F8A700850CDF /* Main.storyboard */,
-				76E7DD821DEA76D7004437CA /* UserProfileController.swift */,
-				76E7DD801DEA475F004437CA /* User.swift */,
 				76E579591DD6E10800582E84 /* ModelPhotographerViewController.swift */,
 				76E7DD841DED19F5004437CA /* ImageStore.swift */,
-				76E7DD9B1DF1431E004437CA /* super-mario-03.png */,
+				88D5D0E01DF3516800D21A03 /* MessengerViewController.swift */,
+				76E7DD9A1DF140EC004437CA /* DraggableCards */,
+				88D5D0DF1DF348B300D21A03 /* USER */,
 				764B81661DD4F8A700850CDF /* Assets.xcassets */,
+				88773AA61DF360CE0041A094 /* GoogleService-Info.plist */,
 				764B81681DD4F8A700850CDF /* LaunchScreen.storyboard */,
 				764B816B1DD4F8A700850CDF /* Info.plist */,
 				764B81631DD4F8A700850CDF /* SCOUT.xcdatamodeld */,
@@ -178,6 +174,15 @@
 			name = DraggableCards;
 			sourceTree = "<group>";
 		};
+		88D5D0DF1DF348B300D21A03 /* USER */ = {
+			isa = PBXGroup;
+			children = (
+				76E7DD821DEA76D7004437CA /* UserProfileController.swift */,
+				76E7DD801DEA475F004437CA /* User.swift */,
+			);
+			name = USER;
+			sourceTree = "<group>";
+		};
 		A97B4969BA39D50B4F65EE46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,12 +207,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 764B81841DD4F8A800850CDF /* Build configuration list for PBXNativeTarget "SCOUT" */;
 			buildPhases = (
+				FE5B4D1E3B8D486856B796EC /* 📦 Check Pods Manifest.lock */,
 				0DAA3AD76F26BE830D5159F4 /* [CP] Check Pods Manifest.lock */,
 				764B81551DD4F8A700850CDF /* Sources */,
 				764B81561DD4F8A700850CDF /* Frameworks */,
 				764B81571DD4F8A700850CDF /* Resources */,
 				A0938CE23780480B2250520A /* [CP] Embed Pods Frameworks */,
 				3A2136ADA9A405C8C1E3EA27 /* [CP] Copy Pods Resources */,
+				63082D5B04DA55030590B30B /* 📦 Embed Pods Frameworks */,
+				D077E33F114512EC3CAB5B3E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,8 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				764B816A1DD4F8A700850CDF /* LaunchScreen.storyboard in Resources */,
-				764B818E1DD4F8EA00850CDF /* GoogleService-Info.plist in Resources */,
-				76E7DD9C1DF1431E004437CA /* super-mario-03.png in Resources */,
+				88773AA71DF360CE0041A094 /* GoogleService-Info.plist in Resources */,
 				764B81671DD4F8A700850CDF /* Assets.xcassets in Resources */,
 				764B81621DD4F8A700850CDF /* Main.storyboard in Resources */,
 			);
@@ -366,6 +373,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		63082D5B04DA55030590B30B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A0938CE23780480B2250520A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +403,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D077E33F114512EC3CAB5B3E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE5B4D1E3B8D486856B796EC /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -394,9 +446,9 @@
 				76E7DD851DED19F5004437CA /* ImageStore.swift in Sources */,
 				76E7DD811DEA475F004437CA /* User.swift in Sources */,
 				764B815D1DD4F8A700850CDF /* AppDelegate.swift in Sources */,
-				76E7DD881DF0C52C004437CA /* UserCell.swift in Sources */,
 				764B81651DD4F8A700850CDF /* SCOUT.xcdatamodeld in Sources */,
 				76E579541DD544D000582E84 /* MainViewController.swift in Sources */,
+				88D5D0E11DF3516800D21A03 /* MessengerViewController.swift in Sources */,
 				76E7DD991DF14044004437CA /* OverlayView.swift in Sources */,
 				76E7DD971DF14044004437CA /* DraggableView.swift in Sources */,
 				76E7DD831DEA76D7004437CA /* UserProfileController.swift in Sources */,

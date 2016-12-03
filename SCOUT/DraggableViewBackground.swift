@@ -103,7 +103,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
            
                 
                     
-                    
+                
                 
                 
             }).resume()
@@ -174,7 +174,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         if loadedCards.count <= 0 {
             return
         }
-        var dragView: DraggableView = loadedCards[0]
+        let dragView: DraggableView = loadedCards[0]
         dragView.overlayView.setMode(GGOverlayViewMode.ggOverlayViewModeRight)
         UIView.animate(withDuration: 0.2, animations: {
             () -> Void in
@@ -187,7 +187,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         if loadedCards.count <= 0 {
             return
         }
-        var dragView: DraggableView = loadedCards[0]
+        let dragView: DraggableView = loadedCards[0]
         dragView.overlayView.setMode(GGOverlayViewMode.ggOverlayViewModeLeft)
         UIView.animate(withDuration: 0.2, animations: {
             () -> Void in

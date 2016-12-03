@@ -130,7 +130,7 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
                         (metadata, erorr) in
                         
                         if error != nil{
-                            print(error)
+                            print(error!)
                             return
                         }
                         if let profileImageUrl = metadata?.downloadURL()?.absoluteString{
@@ -159,7 +159,7 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
         usersReference.updateChildValues(values, withCompletionBlock: {(err,ref)
             in
             if err != nil{
-                print(err)
+                print(err!)
                 return
             }
             print("user has been added to database")
