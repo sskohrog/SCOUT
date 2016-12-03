@@ -8,11 +8,13 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class DraggableViewBackground: UIView, DraggableViewDelegate {
     var exampleCardLabels: [String]!
+    
     var allCards: [DraggableView]!
-
+    var users: [String]!
     let MAX_BUFFER_SIZE = 2
     let CARD_HEIGHT: CGFloat = 386
     let CARD_WIDTH: CGFloat = 290
@@ -23,6 +25,8 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var messageButton: UIButton!
     var checkButton: UIButton!
     var xButton: UIButton!
+    var userImage = [UIImage]()
+    var userr = [User]()
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -32,11 +36,35 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.init(frame: frame)
         super.layoutSubviews()
         self.setupView()
-        exampleCardLabels = ["first", "second", "third", "fourth", "last"]
+        users = []
+        exampleCardLabels = ["first", "second", "third", "fourth","fifth", "last"]
         allCards = []
         loadedCards = []
+        userImage = []
         cardsLoadedIndex = 0
-        self.loadCards()
+        self.fetchUsers()
+        
+    }
+    
+    func fetchUsers()
+    {
+        FIRDatabase.database().reference().child("users").observe(.childAdded, with: {(snapshot) in
+            
+                let user = User(snapshot: snapshot)
+                self.userr.append(user)
+            
+            
+     
+                self.reloadCards(Index: self.userr.count)
+            
+               //print("user afterrrrrrr")
+             //  print(self.userr.count)
+            
+            
+            
+        }, withCancel: nil)
+        //print("wtffff")
+       // print(self.userr.count)
     }
 
     func setupView() -> Void {
@@ -56,15 +84,54 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
 
     func createDraggableViewWithDataAtIndex(_ index: NSInteger) -> DraggableView {
         let draggableView = DraggableView(frame: CGRect(x: (self.frame.size.width - CARD_WIDTH)/2, y: (self.frame.size.height - CARD_HEIGHT)/2, width: CARD_WIDTH, height: CARD_HEIGHT))
-        draggableView.information.text = exampleCardLabels[index]
+        
+        
+        print(index)
+        print(userr[index].email)
+        if let profileImageUrl = userr[index].userprofileimage{
+            let url = Foundation.URL(string: profileImageUrl)
+           // print(url)
+            Foundation.URLSession.shared.dataTask(with: url!, completionHandler: { (data,response,error) in
+               
+                DispatchQueue.main.async {
+                    if let image = UIImage(data:data!)
+                    {
+                        draggableView.imageView?.image = UIImage(data:data!)
+                    }
+                }
+                    //self.userImage.append(UIImage(data: data!)!)
+           
+                
+                    
+                    
+                
+                
+            }).resume()
+        }
+        
+        
+        
+        draggableView.username.text = userr[index].username
+        draggableView.email.text = userr[index].email
+        draggableView.userType.text = userr[index].usertypee
+        //draggableView.imageView.image = userImage[index]
         draggableView.delegate = self
         return draggableView
     }
 
+    func reloadCards(Index: Int)
+    {
+        let newCard: DraggableView = self.createDraggableViewWithDataAtIndex(Index - 1)
+        allCards.append(newCard)
+        
+        loadedCards.append(newCard)
+        self.insertSubview(loadedCards[Index-1], belowSubview: loadedCards[Index - 1])
+        
+    }
     func loadCards() -> Void {
-        if exampleCardLabels.count > 0 {
-            let numLoadedCardsCap = exampleCardLabels.count > MAX_BUFFER_SIZE ? MAX_BUFFER_SIZE : exampleCardLabels.count
-            for i in 0 ..< exampleCardLabels.count {
+        if users.count > 0 {
+            let numLoadedCardsCap = users.count > MAX_BUFFER_SIZE ? MAX_BUFFER_SIZE : users.count
+            for i in 0 ..< users.count {
                 let newCard: DraggableView = self.createDraggableViewWithDataAtIndex(i)
                 allCards.append(newCard)
                 if i < numLoadedCardsCap {

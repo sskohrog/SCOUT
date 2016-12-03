@@ -1,3 +1,4 @@
+
 //
 //  UserCell.swift
 //  SCOUT
@@ -10,10 +11,10 @@ import UIKit
 
 class UserCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
-   
+    
     @IBOutlet weak var userTypeLabel: UILabel!
-   
-   
+    
+    
     @IBOutlet weak var userImage: UIImageView!
     
     func setLabels() {

@@ -9,23 +9,10 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>764B81581DD4F8A700850CDF</key>
+		<key>ZLSwipeableViewSwift.xcscheme</key>
 		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>764B816F1DD4F8A800850CDF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>764B817A1DD4F8A800850CDF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 </dict>

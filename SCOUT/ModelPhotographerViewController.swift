@@ -127,10 +127,10 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
                 let storageRef = FIRStorage.storage().reference().child("\(imageName).png")
                 if let uploadData = UIImagePNGRepresentation(self.userImage!){
                     storageRef.put(uploadData, metadata: nil, completion: {
-                        (metadata, error) in
+                        (metadata, erorr) in
                         
                         if error != nil{
-                            print(error!)
+                            print(error)
                             return
                         }
                         if let profileImageUrl = metadata?.downloadURL()?.absoluteString{
@@ -159,7 +159,7 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
         usersReference.updateChildValues(values, withCompletionBlock: {(err,ref)
             in
             if err != nil{
-                print(err!)
+                print(err)
                 return
             }
             print("user has been added to database")

@@ -11,15 +11,21 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
-import MessageUI
 
-class UserProfileController: UIViewController, MFMailComposeViewControllerDelegate {
+class UserProfileController: UIViewController {
+ 
     
-    @IBOutlet weak var username: UILabel!
     @IBOutlet weak var usertype: UILabel!
-    @IBOutlet weak var email: UIButton!
+   
+    @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userprofpic: UIImageView!
-    
+
+  
+    @IBOutlet weak var email: UILabel!
+
+ 
+
+   
     var databaseRef : FIRDatabaseReference!{
         return FIRDatabase.database().reference()
     }
@@ -30,6 +36,13 @@ class UserProfileController: UIViewController, MFMailComposeViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
         if FIRAuth.auth()?.currentUser == nil{
             
             
@@ -38,11 +51,11 @@ class UserProfileController: UIViewController, MFMailComposeViewControllerDelega
         {
             
             databaseRef.child("users/\(FIRAuth.auth()!.currentUser!.uid)").observe(.value, with: {(snapshot) in
-         
+                
                 DispatchQueue.main.async {
                     let userr = User(snapshot: snapshot)
                     self.username.text = userr.username
-                    self.email.setTitle(userr.email, for: .normal)
+                    //self.email.text = userr.email
                     self.usertype.text = userr.usertypee
                     
                     if let profileImageUrl = userr.userprofileimage{
@@ -50,43 +63,17 @@ class UserProfileController: UIViewController, MFMailComposeViewControllerDelega
                         
                         Foundation.URLSession.shared.dataTask(with: url!, completionHandler: { (data,response,error) in
                             DispatchQueue.main.async{
-                            self.userprofpic.image = UIImage(data: data!)
+                                self.userprofpic.image = UIImage(data: data!)
                             }
                             
                         }).resume()
                     }
                 }
-       
+                
             }, withCancel: { (error) in
                 print(error.localizedDescription)
             })
-   
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-    @IBAction func sendEmailButton(sender: AnyObject) {
-        if MFMailComposeViewController.canSendMail() {
-            let email = MFMailComposeViewController()
-            email.mailComposeDelegate = self
-            email.setToRecipients(["\(self.email.titleLabel!.text)"])
-            email.setSubject("Hi \(self.username.text)! I found you on SCOÜT!")
-            email.setMessageBody("I found you on SCOÜT and wanted to get to know you better.", isHTML: false)
-        } else {
-            print("can't send message")
+            
         }
     }
 }
-
-
-
-
-
-
-
-
-

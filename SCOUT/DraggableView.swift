@@ -26,11 +26,19 @@ class DraggableView: UIView {
     var panGestureRecognizer: UIPanGestureRecognizer!
     var originPoint: CGPoint!
     var overlayView: OverlayView!
-    var information: UILabel!
+    var username: UILabel!
+    var email: UILabel!
+    var userType: UILabel!
+    
+    
+    let imageName = "super-mario-03.png"
+    var imageView: UIImageView!
+    
+    
     var xFromCenter: Float!
     var yFromCenter: Float!
 
-    required init?(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
     
@@ -38,18 +46,43 @@ class DraggableView: UIView {
         super.init(frame: frame)
 
         self.setupView()
+       
+        imageView = UIImageView()
+        
+        imageView?.frame = CGRect(x: 0, y: 0, width: 290, height: 300)
+        self.addSubview(imageView!)
+        
+        
+        
+        
+        username = UILabel(frame: CGRect(x: -90, y: 280, width: self.frame.size.width, height: 100))
+        username.text = "no info given"
+        username.textAlignment = NSTextAlignment.center
+        username.textColor = UIColor.black
 
-        information = UILabel(frame: CGRect(x: 0, y: 50, width: self.frame.size.width, height: 100))
-        information.text = "no info given"
-        information.textAlignment = NSTextAlignment.center
-        information.textColor = UIColor.black
-
+        self.backgroundColor = UIColor.white
+        
+        
+        email = UILabel(frame: CGRect(x: 50, y: 295, width: self.frame.size.width, height: 100))
+        email.text = "no info given"
+        email.textAlignment = NSTextAlignment.center
+        email.textColor = UIColor.red
+        
+        
+        
+        userType = UILabel(frame: CGRect(x:-90 , y: 310, width: self.frame.size.width, height: 100))
+        userType.text = "no info given"
+        userType.textAlignment = NSTextAlignment.center
+        userType.textColor = UIColor.green
+        
         self.backgroundColor = UIColor.white
 
         panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DraggableView.beingDragged(_:)))
 
         self.addGestureRecognizer(panGestureRecognizer)
-        self.addSubview(information)
+        self.addSubview(username)
+        self.addSubview(email)
+        self.addSubview(userType)
 
         overlayView = OverlayView(frame: CGRect(x: self.frame.size.width/2-100, y: 0, width: 100, height: 100))
         overlayView.alpha = 0
