@@ -45,16 +45,18 @@
             </objects>
             <point key="canvasLocation" x="2276" y="112.89355322338831"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Discover-->
         <scene sceneID="6AL-lX-VOI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AEC-lZ-LMK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="KnM-6p-avP"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="Search Filled-35" selectedImage="Search Filled-35" id="KnM-6p-avP">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="-3"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HXf-67-0WD">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="HXf-67-0WD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.69123677289999996" green="0.87332099080000003" blue="0.88157720429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -98,8 +100,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80G-It-JVD">
-                                <rect key="frame" x="75" y="554" width="225" height="30"/>
-                                <state key="normal" title="I have an account! Let me log in..">
+                                <rect key="frame" x="73" y="554" width="229" height="30"/>
+                                <state key="normal" title="I have an account! Let me log in...">
                                     <color key="titleColor" red="0.52156865600000002" green="0.52156865600000002" blue="0.52156865600000002" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -287,26 +289,26 @@
                                     <segue destination="L8m-ij-IrW" kind="presentation" identifier="signUpSeg" id="6Ql-19-Zt8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SCOÜT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYv-Y0-S7K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCOÜT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYv-Y0-S7K">
                                 <rect key="frame" x="156" y="48" width="70" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Find a photographer." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soE-jG-woQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find a photographer." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soE-jG-woQ">
                                 <rect key="frame" x="15" y="252" width="222" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Find a model." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXG-Q7-jfj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a model." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXG-Q7-jfj">
                                 <rect key="frame" x="28" y="293" width="141" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Shoot." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsM-Dt-at9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoot." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsM-Dt-at9">
                                 <rect key="frame" x="45" y="334" width="72" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -397,12 +399,13 @@
                                 <color key="textColor" red="0.69123677289999996" green="0.87332099080000003" blue="0.88157720429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="sophkohrog@syr.edu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivN-Oa-qCe" userLabel="email">
-                                <rect key="frame" x="178" y="580" width="162" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                <color key="textColor" red="0.91085398200000001" green="0.68123161789999997" blue="0.67665487530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp8-Kv-Knc">
+                                <rect key="frame" x="230" y="575" width="105" height="30"/>
+                                <state key="normal" title="sophk@syr.edu"/>
+                                <connections>
+                                    <action selector="sendEmailButtonWithSender:" destination="eQg-C5-OKE" eventType="touchUpInside" id="OAK-9u-ZIu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -411,8 +414,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="35H-df-ZVb" secondAttribute="trailing" constant="150" id="LE1-c5-jdI"/>
                             <constraint firstItem="35H-df-ZVb" firstAttribute="leading" secondItem="2w0-yE-e13" secondAttribute="leadingMargin" constant="18" id="PNH-or-tWH"/>
                             <constraint firstItem="Ckb-14-soB" firstAttribute="leading" secondItem="2w0-yE-e13" secondAttribute="leadingMargin" constant="18" id="WY4-1D-j9s"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ivN-Oa-qCe" secondAttribute="trailing" constant="19" id="dLa-2r-1dJ"/>
-                            <constraint firstItem="xIO-KJ-mvX" firstAttribute="top" secondItem="ivN-Oa-qCe" secondAttribute="bottom" constant="17" id="kOv-JB-zb1"/>
+                            <constraint firstItem="Hp8-Kv-Knc" firstAttribute="leading" secondItem="Ckb-14-soB" secondAttribute="trailing" constant="91" id="Xuv-5b-JII"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hp8-Kv-Knc" secondAttribute="trailing" constant="24" id="cm4-Vb-FyW"/>
+                            <constraint firstItem="xIO-KJ-mvX" firstAttribute="top" secondItem="Hp8-Kv-Knc" secondAttribute="bottom" constant="13" id="mCN-th-eCd"/>
                             <constraint firstItem="6OL-o4-eSk" firstAttribute="centerX" secondItem="2w0-yE-e13" secondAttribute="centerX" id="oJd-cU-ap6"/>
                             <constraint firstItem="Ckb-14-soB" firstAttribute="top" secondItem="35H-df-ZVb" secondAttribute="bottom" constant="4" id="v7h-9b-cFP"/>
                         </constraints>
@@ -432,7 +436,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="email" destination="ivN-Oa-qCe" id="KU5-Qh-Tff"/>
+                        <outlet property="email" destination="Hp8-Kv-Knc" id="ss8-9T-mxR"/>
                         <outlet property="username" destination="35H-df-ZVb" id="bvv-nx-CUm"/>
                         <outlet property="userprofpic" destination="btv-t8-oWR" id="Ryr-mR-JWn"/>
                         <outlet property="usertype" destination="Ckb-14-soB" id="o0X-w0-yAA"/>
@@ -465,9 +469,12 @@
                                             <color key="textColor" red="0.90980392160000001" green="0.68235294120000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ix9-GE-7vR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ix9-GE-7vR">
                                             <rect key="frame" x="11" y="9" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="cca-5b-SPw"/>
+                                                <constraint firstAttribute="height" constant="60" id="yDw-RJ-Gpr"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5:15PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AJ-H3-bR8">
                                             <rect key="frame" x="320" y="8" width="47" height="20"/>
@@ -508,6 +515,7 @@
     <resources>
         <image name="Circled User Male-35" width="35" height="35"/>
         <image name="Message-35" width="35" height="35"/>
+        <image name="Search Filled-35" width="35" height="35"/>
         <image name="UO-early-fall3-797x1200" width="797" height="1200"/>
         <image name="User_Placeholder" width="1200" height="1200"/>
         <image name="pics0004" width="200" height="200"/>

@@ -11,12 +11,13 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
+import MessageUI
 
-class UserProfileController: UIViewController {
+class UserProfileController: UIViewController, MFMailComposeViewControllerDelegate {
  
-    
+
     @IBOutlet weak var usertype: UILabel!
-    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var email: UIButton!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userprofpic: UIImageView!
 
@@ -52,7 +53,7 @@ class UserProfileController: UIViewController {
                 DispatchQueue.main.async {
                     let userr = User(snapshot: snapshot)
                     self.username.text = userr.username
-                    self.email.text = userr.email
+                    self.email.setTitle(userr.email, for: .normal)
                     self.usertype.text = userr.usertypee
                     
                     if let profileImageUrl = userr.userprofileimage{
@@ -71,6 +72,18 @@ class UserProfileController: UIViewController {
                 print(error.localizedDescription)
             })
             
+        }
+    }
+    
+    @IBAction func sendEmailButton(sender: AnyObject) {
+        if MFMailComposeViewController.canSendMail() {
+            let email = MFMailComposeViewController()
+            email.mailComposeDelegate = self
+            email.setToRecipients(["\(self.email.titleLabel!.text)"])
+            email.setSubject("Hi \(self.username.text)! I found you on SCOÜT!")
+            email.setMessageBody("I found you on SCOÜT and wanted to get to know you better.", isHTML: false)
+        } else {
+            print("can't send message")
         }
     }
 }

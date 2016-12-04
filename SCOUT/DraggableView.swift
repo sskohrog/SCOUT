@@ -27,7 +27,7 @@ class DraggableView: UIView {
     var originPoint: CGPoint!
     var overlayView: OverlayView!
     var username: UILabel!
-    var email: UILabel!
+    var email: UIButton!
     var userType: UILabel!
     
     
@@ -63,17 +63,16 @@ class DraggableView: UIView {
         self.backgroundColor = UIColor.white
         
         
-        email = UILabel(frame: CGRect(x: 50, y: 295, width: self.frame.size.width, height: 100))
-        email.text = "no info given"
-        email.textAlignment = NSTextAlignment.center
-        email.textColor = UIColor(red:0.91, green:0.68, blue:0.68, alpha:1.0)
-        
+        email = UIButton(frame: CGRect(x: 50, y: 295, width: self.frame.size.width, height: 100))
+        email.setTitle("NO INFO", for: .normal)
+        //email.textAlignment = NSTextAlignment.center
+        email.setTitleColor(UIColor(red:0.69, green:0.87, blue:0.88, alpha:1.0), for: .normal)
         
         
         userType = UILabel(frame: CGRect(x:-90 , y: 310, width: self.frame.size.width, height: 100))
         userType.text = "no info given"
         userType.textAlignment = NSTextAlignment.center
-        userType.textColor = UIColor(red:0.69, green:0.87, blue:0.88, alpha:1.0)
+        userType.textColor = UIColor(red:0.91, green:0.68, blue:0.68, alpha:1.0)
         
         self.backgroundColor = UIColor.white
 

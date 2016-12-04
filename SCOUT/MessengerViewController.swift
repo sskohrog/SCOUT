@@ -30,7 +30,7 @@ class MessengerViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 6
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,14 +41,20 @@ class MessengerViewController: UITableViewController {
             let user = User(snapshot: snapshot)
             self.users.append(user)
             
+            msgCell.nameLabel.text = self.users[indexPath.row].username
             
-            
-            
+            if let profileImageUrl = self.users[indexPath.row].userprofileimage{
+                let url = Foundation.URL(string: profileImageUrl)
+                
+                Foundation.URLSession.shared.dataTask(with: url!, completionHandler: { (data,response,error) in
+                    DispatchQueue.main.async{
+                        msgCell.userImg.image = UIImage(data: data!)
+                    }
+                    
+                }).resume()
+            }
         }, withCancel: nil)
 
-        
-        
-        
         return msgCell
     }
     

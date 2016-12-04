@@ -103,7 +103,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         }
         
         draggableView.username.text = userr[index].username
-        draggableView.email.text = userr[index].email
+        draggableView.email.setTitle(userr[index].email, for: .normal)
         draggableView.userType.text = userr[index].usertypee
         //draggableView.imageView.image = userImage[index]
         draggableView.delegate = self
