@@ -98,16 +98,9 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
                     }
                 }
                     //self.userImage.append(UIImage(data: data!)!)
-           
-                
-                    
-                
-                
                 
             }).resume()
         }
-        
-        
         
         draggableView.username.text = userr[index].username
         draggableView.email.text = userr[index].email

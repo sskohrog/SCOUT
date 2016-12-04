@@ -13,8 +13,6 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-
-
 class MainViewController: UIViewController {
     
     
@@ -27,30 +25,7 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-    
-//    
-//         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//            return 1
-//        }
-//    
-//         func numberOfSections(in tableView: UITableView) -> Int {
-//            return 1
-//        }
-    
-    
-//        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//            // Table view cells are reused and should be dequeued using a cell identifier.
-//    
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
-//    
-//            cell.nameLabel.text = "Mohammed"
-//            //cell.photoImageView.image = meal.photo
-//            cell.userTypeLabel.text = "model"
-//            
-//            return cell
-//        }
-    
-    
+        
     @IBAction func signOut(_ sender: Any) {
        if (FIRAuth.auth()?.currentUser != nil)
        {

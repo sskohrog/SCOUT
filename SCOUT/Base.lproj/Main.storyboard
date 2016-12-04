@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--DISCOVER-->
         <scene sceneID="iTP-cA-xH0">
             <objects>
                 <viewController id="Vw0-oa-Srb" customClass="MainViewController" customModule="SCOUT" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="o2v-Dt-SQn">
+                    <navigationItem key="navigationItem" title="DISCOVER" id="o2v-Dt-SQn">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="6GF-e0-fNd">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oh7-1f-f8k">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -44,119 +44,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMW-Fb-CbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2276" y="112.89355322338831"/>
-        </scene>
-        <!--Model Photographer Controller-->
-        <scene sceneID="wx8-7O-trY">
-            <objects>
-                <viewController id="YVv-L6-PEo" customClass="ModelPhotographerController" customModule="SCOUT" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="x6d-bJ-aak"/>
-                        <viewControllerLayoutGuide type="bottom" id="S7I-Gk-vMB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XDj-RT-mF0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgd-XQ-DKc">
-                                <rect key="frame" x="160" y="587" width="55" height="30"/>
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <action selector="signUpButton:" destination="YVv-L6-PEo" eventType="touchUpInside" id="Uzu-BT-Tdm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5L-LE-py1">
-                                <rect key="frame" x="75" y="625" width="225" height="30"/>
-                                <state key="normal" title="I have an account! Let me log in.."/>
-                                <connections>
-                                    <action selector="goBackToSignInPage:" destination="YVv-L6-PEo" eventType="touchUpInside" id="FoG-ox-bD6"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="lr6-S7-IC1">
-                                <rect key="frame" x="89" y="551" width="197" height="29"/>
-                                <segments>
-                                    <segment title="Model"/>
-                                    <segment title="Photographer"/>
-                                </segments>
-                                <connections>
-                                    <action selector="indexHasChanged:" destination="YVv-L6-PEo" eventType="valueChanged" id="iyQ-RQ-DWD"/>
-                                </connections>
-                            </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpg-q2-YFu">
-                                <rect key="frame" x="16" y="267" width="343" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="heL-hb-pej"/>
-                                    <constraint firstAttribute="width" constant="343" id="mas-q9-nkm"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMO-bl-JZE">
-                                <rect key="frame" x="16" y="447" width="343" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="DNK-1H-ZWb"/>
-                                    <constraint firstAttribute="width" constant="343" id="i1T-AK-nZw"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVz-tQ-yRo">
-                                <rect key="frame" x="16" y="360" width="343" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="Ida-Fv-009"/>
-                                    <constraint firstAttribute="height" constant="42" id="jQp-JE-qbU"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="User_Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MmF-Q9-JUr">
-                                <rect key="frame" x="67" y="56" width="233" height="164"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="233" id="3HA-lc-ZXU"/>
-                                    <constraint firstAttribute="height" constant="164" id="Vcp-09-Mf9"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jUI-ja-nF9" appends="YES" id="N04-wA-C0t"/>
-                                </connections>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="MmF-Q9-JUr" firstAttribute="centerX" secondItem="XDj-RT-mF0" secondAttribute="centerX" id="0pS-n2-Grc"/>
-                            <constraint firstItem="M5L-LE-py1" firstAttribute="centerX" secondItem="XDj-RT-mF0" secondAttribute="centerX" id="36A-Io-kmm"/>
-                            <constraint firstItem="Bgd-XQ-DKc" firstAttribute="top" secondItem="lr6-S7-IC1" secondAttribute="bottom" constant="8" id="4G3-rI-fKB"/>
-                            <constraint firstItem="lr6-S7-IC1" firstAttribute="centerX" secondItem="XDj-RT-mF0" secondAttribute="centerX" id="5Of-nN-gQL"/>
-                            <constraint firstItem="bVz-tQ-yRo" firstAttribute="top" secondItem="bpg-q2-YFu" secondAttribute="bottom" constant="51" id="BBs-jC-oCs"/>
-                            <constraint firstItem="M5L-LE-py1" firstAttribute="top" secondItem="Bgd-XQ-DKc" secondAttribute="bottom" constant="8" id="E7G-hE-CIp"/>
-                            <constraint firstItem="bpg-q2-YFu" firstAttribute="top" secondItem="MmF-Q9-JUr" secondAttribute="bottom" constant="47" id="HpX-E3-3q5"/>
-                            <constraint firstItem="bpg-q2-YFu" firstAttribute="centerX" secondItem="XDj-RT-mF0" secondAttribute="centerX" id="M3K-vY-6me"/>
-                            <constraint firstItem="MmF-Q9-JUr" firstAttribute="top" secondItem="x6d-bJ-aak" secondAttribute="bottom" constant="36" id="Nfr-Cu-y0U"/>
-                            <constraint firstItem="lr6-S7-IC1" firstAttribute="top" secondItem="PMO-bl-JZE" secondAttribute="bottom" constant="62" id="S7o-dp-GF9"/>
-                            <constraint firstItem="PMO-bl-JZE" firstAttribute="centerX" secondItem="XDj-RT-mF0" secondAttribute="centerX" id="W9X-z7-rVD"/>
-                            <constraint firstItem="Bgd-XQ-DKc" firstAttribute="centerX" secondItem="XDj-RT-mF0" secondAttribute="centerX" id="Yju-HU-4cC"/>
-                            <constraint firstItem="PMO-bl-JZE" firstAttribute="top" secondItem="bVz-tQ-yRo" secondAttribute="bottom" constant="45" id="edh-uc-jEA"/>
-                            <constraint firstItem="bVz-tQ-yRo" firstAttribute="centerX" secondItem="XDj-RT-mF0" secondAttribute="centerX" id="saf-86-0zt"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="email" destination="bVz-tQ-yRo" id="5OL-PR-dGc"/>
-                        <outlet property="password" destination="PMO-bl-JZE" id="oOc-E3-W0s"/>
-                        <outlet property="segmentedControl" destination="lr6-S7-IC1" id="c5V-ec-uww"/>
-                        <outlet property="userimageView" destination="MmF-Q9-JUr" id="re5-0L-U5l"/>
-                        <outlet property="username" destination="bpg-q2-YFu" id="oKi-jC-xTf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jP8-XR-0no" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="jUI-ja-nF9">
-                    <connections>
-                        <action selector="choosePicture:" destination="YVv-L6-PEo" id="UCF-Es-KBf"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="3952.8000000000002" y="162.3688155922039"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6AL-lX-VOI">
@@ -221,7 +108,7 @@
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="CDM-nb-Q33">
                                 <rect key="frame" x="89" y="516" width="197" height="29"/>
-                                <color key="backgroundColor" red="0.52156865600000002" green="0.52156865600000002" blue="0.52156865600000002" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
                                     <segment title="Model"/>
                                     <segment title="Photographer"/>
@@ -625,5 +512,5 @@
         <image name="User_Placeholder" width="1200" height="1200"/>
         <image name="pics0004" width="200" height="200"/>
     </resources>
-    <color key="tintColor" red="0.91085398200000001" green="0.68123161789999997" blue="0.67665487530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.90980392160000001" green="0.68235294120000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

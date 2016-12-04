@@ -10,9 +10,6 @@ import UIKit
 import Firebase
 class LoginViewController: UIViewController {
 
-    
-    
-    
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
     let mainController = MainViewController()

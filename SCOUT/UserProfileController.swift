@@ -20,8 +20,6 @@ class UserProfileController: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userprofpic: UIImageView!
 
- 
-
    
     var databaseRef : FIRDatabaseReference!{
         return FIRDatabase.database().reference()
