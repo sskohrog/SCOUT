@@ -63,8 +63,6 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
             
             
         }, withCancel: nil)
-        //print("wtffff")
-       // print(self.userr.count)
     }
 
     func setupView() -> Void {

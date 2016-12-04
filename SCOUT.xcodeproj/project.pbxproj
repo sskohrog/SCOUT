@@ -24,6 +24,8 @@
 		76E7DD981DF14044004437CA /* DraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD951DF14044004437CA /* DraggableViewBackground.swift */; };
 		76E7DD991DF14044004437CA /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7DD961DF14044004437CA /* OverlayView.swift */; };
 		88773AA71DF360CE0041A094 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88773AA61DF360CE0041A094 /* GoogleService-Info.plist */; };
+		88773AA91DF37D390041A094 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88773AA81DF37D390041A094 /* Message.swift */; };
+		88773AAC1DF37E6F0041A094 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88773AAB1DF37E6F0041A094 /* MessageCell.swift */; };
 		88D5D0E11DF3516800D21A03 /* MessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D5D0E01DF3516800D21A03 /* MessengerViewController.swift */; };
 		E902D33855C90B56A0DA4BA8 /* Pods_SCOUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF1D261DBCCB75A28A9742A /* Pods_SCOUT.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,8 @@
 		76E7DD951DF14044004437CA /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
 		76E7DD961DF14044004437CA /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		88773AA61DF360CE0041A094 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88773AA81DF37D390041A094 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		88773AAB1DF37E6F0041A094 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		88D5D0E01DF3516800D21A03 /* MessengerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerViewController.swift; sourceTree = "<group>"; };
 		D8C964DD0AE169E01EF9DEB6 /* Pods-SCOUT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCOUT.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCOUT/Pods-SCOUT.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,7 +138,7 @@
 				76E579531DD544D000582E84 /* MainViewController.swift */,
 				76E579591DD6E10800582E84 /* ModelPhotographerViewController.swift */,
 				76E7DD841DED19F5004437CA /* ImageStore.swift */,
-				88D5D0E01DF3516800D21A03 /* MessengerViewController.swift */,
+				88773AAA1DF37D3F0041A094 /* MSGS */,
 				76E7DD9A1DF140EC004437CA /* DraggableCards */,
 				88D5D0DF1DF348B300D21A03 /* USER */,
 				764B81661DD4F8A700850CDF /* Assets.xcassets */,
@@ -172,6 +176,16 @@
 				76E7DD961DF14044004437CA /* OverlayView.swift */,
 			);
 			name = DraggableCards;
+			sourceTree = "<group>";
+		};
+		88773AAA1DF37D3F0041A094 /* MSGS */ = {
+			isa = PBXGroup;
+			children = (
+				88D5D0E01DF3516800D21A03 /* MessengerViewController.swift */,
+				88773AA81DF37D390041A094 /* Message.swift */,
+				88773AAB1DF37E6F0041A094 /* MessageCell.swift */,
+			);
+			name = MSGS;
 			sourceTree = "<group>";
 		};
 		88D5D0DF1DF348B300D21A03 /* USER */ = {
@@ -449,9 +463,11 @@
 				764B81651DD4F8A700850CDF /* SCOUT.xcdatamodeld in Sources */,
 				76E579541DD544D000582E84 /* MainViewController.swift in Sources */,
 				88D5D0E11DF3516800D21A03 /* MessengerViewController.swift in Sources */,
+				88773AA91DF37D390041A094 /* Message.swift in Sources */,
 				76E7DD991DF14044004437CA /* OverlayView.swift in Sources */,
 				76E7DD971DF14044004437CA /* DraggableView.swift in Sources */,
 				76E7DD831DEA76D7004437CA /* UserProfileController.swift in Sources */,
+				88773AAC1DF37E6F0041A094 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

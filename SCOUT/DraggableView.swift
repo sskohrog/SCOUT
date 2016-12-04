@@ -58,7 +58,7 @@ class DraggableView: UIView {
         username = UILabel(frame: CGRect(x: -90, y: 280, width: self.frame.size.width, height: 100))
         username.text = "no info given"
         username.textAlignment = NSTextAlignment.center
-        username.textColor = UIColor.black
+        username.textColor = UIColor(red:0.91, green:0.68, blue:0.68, alpha:1.0)
 
         self.backgroundColor = UIColor.white
         
@@ -66,14 +66,14 @@ class DraggableView: UIView {
         email = UILabel(frame: CGRect(x: 50, y: 295, width: self.frame.size.width, height: 100))
         email.text = "no info given"
         email.textAlignment = NSTextAlignment.center
-        email.textColor = UIColor.red
+        email.textColor = UIColor(red:0.91, green:0.68, blue:0.68, alpha:1.0)
         
         
         
         userType = UILabel(frame: CGRect(x:-90 , y: 310, width: self.frame.size.width, height: 100))
         userType.text = "no info given"
         userType.textAlignment = NSTextAlignment.center
-        userType.textColor = UIColor.green
+        userType.textColor = UIColor(red:0.69, green:0.87, blue:0.88, alpha:1.0)
         
         self.backgroundColor = UIColor.white
 
