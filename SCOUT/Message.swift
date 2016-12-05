@@ -25,5 +25,4 @@ class Message: NSObject {
         img = snapshotValue?["profileImageUrl"] as? String
         ref = snapshot.ref
     }
-    
 }

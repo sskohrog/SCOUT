@@ -29,45 +29,33 @@ class LoginViewController: UIViewController {
             
             user, error in
             
-            if error != nil{
+            if error != nil {
                 self.login()
             }
-            else
-            {
+            else {
                 print("User created!")
                 self.login()
             }
-            
-            
         })
     }
   
-   
     @IBAction func NewUserRegester(_ sender: Any) {
         self.performSegue(withIdentifier: "signUpSeg", sender: self)
-
     }
   
-
     func login(){
         FIRAuth.auth()?.signIn(withEmail: Username.text!, password: Password.text!, completion:{
             
             user, error in
             
-            if error != nil{
+            if error != nil {
                 print("Password/User is incorrect!")
-            }
-            else
-            {
-
-            
+            } else {
                 _ = self.navigationController?.popViewController(animated: true)
                 
-                self.dismiss(animated: true, completion: nil)            }
-           
-            
-            
-        
-        })    }
+                self.dismiss(animated: true, completion: nil)
+            }
+        })
+    }
 }
 

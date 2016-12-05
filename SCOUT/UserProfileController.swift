@@ -36,18 +36,13 @@ class UserProfileController: UIViewController, MFMailComposeViewControllerDelega
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
-        if FIRAuth.auth()?.currentUser == nil{
-            
+        if FIRAuth.auth()?.currentUser == nil {
             
         }
-        else
-        {
-            
+        else {
             databaseRef.child("users/\(FIRAuth.auth()!.currentUser!.uid)").observe(.value, with: {(snapshot) in
                 
                 DispatchQueue.main.async {
@@ -56,7 +51,7 @@ class UserProfileController: UIViewController, MFMailComposeViewControllerDelega
                     self.email.setTitle(userr.email, for: .normal)
                     self.usertype.text = userr.usertypee
                     
-                    if let profileImageUrl = userr.userprofileimage{
+                    if let profileImageUrl = userr.userprofileimage {
                         let url = Foundation.URL(string: profileImageUrl)
                         
                         Foundation.URLSession.shared.dataTask(with: url!, completionHandler: { (data,response,error) in
@@ -67,11 +62,9 @@ class UserProfileController: UIViewController, MFMailComposeViewControllerDelega
                         }).resume()
                     }
                 }
-                
             }, withCancel: { (error) in
                 print(error.localizedDescription)
             })
-            
         }
     }
     

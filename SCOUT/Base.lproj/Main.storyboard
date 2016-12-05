@@ -414,7 +414,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="35H-df-ZVb" secondAttribute="trailing" constant="150" id="LE1-c5-jdI"/>
                             <constraint firstItem="35H-df-ZVb" firstAttribute="leading" secondItem="2w0-yE-e13" secondAttribute="leadingMargin" constant="18" id="PNH-or-tWH"/>
                             <constraint firstItem="Ckb-14-soB" firstAttribute="leading" secondItem="2w0-yE-e13" secondAttribute="leadingMargin" constant="18" id="WY4-1D-j9s"/>
-                            <constraint firstItem="Hp8-Kv-Knc" firstAttribute="leading" secondItem="Ckb-14-soB" secondAttribute="trailing" constant="91" id="Xuv-5b-JII"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hp8-Kv-Knc" secondAttribute="trailing" constant="24" id="cm4-Vb-FyW"/>
                             <constraint firstItem="xIO-KJ-mvX" firstAttribute="top" secondItem="Hp8-Kv-Knc" secondAttribute="bottom" constant="13" id="mCN-th-eCd"/>
                             <constraint firstItem="6OL-o4-eSk" firstAttribute="centerX" secondItem="2w0-yE-e13" secondAttribute="centerX" id="oJd-cU-ap6"/>
@@ -444,19 +443,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENw-PA-Flg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="677.60000000000002" y="832.53373313343332"/>
+            <point key="canvasLocation" x="518" y="914"/>
         </scene>
         <!--MessagesViewController-->
         <scene sceneID="qao-ZP-FDl">
             <objects>
                 <tableViewController id="Lak-Wc-LBi" userLabel="MessagesViewController" customClass="MessengerViewController" customModule="SCOUT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="73" sectionFooterHeight="36" id="P0X-q9-Fuv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="76" sectionFooterHeight="1" id="P0X-q9-Fuv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="80" id="lZx-5G-1LD" customClass="MessageCell" customModule="SCOUT" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="73" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lZx-5G-1LD" id="7Ru-FY-ecG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
@@ -469,8 +468,8 @@
                                             <color key="textColor" red="0.90980392160000001" green="0.68235294120000001" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ix9-GE-7vR">
-                                            <rect key="frame" x="11" y="9" width="60" height="60"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ix9-GE-7vR">
+                                            <rect key="frame" x="11" y="10" width="60" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="cca-5b-SPw"/>
                                                 <constraint firstAttribute="height" constant="60" id="yDw-RJ-Gpr"/>
@@ -491,6 +490,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ix9-GE-7vR" secondAttribute="bottom" constant="2" id="VlG-Od-PJf"/>
+                                        <constraint firstItem="Ix9-GE-7vR" firstAttribute="leading" secondItem="7Ru-FY-ecG" secondAttribute="leadingMargin" constant="3" id="Xa5-bq-V5U"/>
+                                        <constraint firstItem="Ix9-GE-7vR" firstAttribute="top" secondItem="7Ru-FY-ecG" secondAttribute="topMargin" constant="2" id="oyF-8u-8YP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="7fP-5Y-OTh" id="rdu-Zb-E6U"/>
@@ -498,6 +502,7 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Lak-Wc-LBi" id="iyD-ch-Sin"/>
                             <outlet property="delegate" destination="Lak-Wc-LBi" id="DYu-gs-mgP"/>
@@ -509,7 +514,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNM-c8-qnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480.8" y="799.2503748125938"/>
+            <point key="canvasLocation" x="1580" y="913"/>
         </scene>
     </scenes>
     <resources>

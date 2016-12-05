@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 
 
-struct User{
+struct User {
     
     var username: String!
     var email: String!
@@ -20,9 +20,7 @@ struct User{
     var userprofileimage: String!
     var key: String
     
-    
-    init(snapshot: FIRDataSnapshot)
-    {
+    init(snapshot: FIRDataSnapshot) {
         key = snapshot.key
         
         let snapshotValue = snapshot.value as? NSDictionary

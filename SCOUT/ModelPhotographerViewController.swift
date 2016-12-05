@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FirebaseStorage
 import Firebase
-class ModelPhotographerController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ModelPhotographerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -26,8 +26,6 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,17 +56,12 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
             userimageView.contentMode = .scaleAspectFit
             userimageView.image = pickedImage
         }
-        
         dismiss(animated: true, completion: nil)
     }
     
     //delegate protocol for the UIImagePickerController that is called when the user selects a media item
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         print("imagePickerController(_:didFinishPickingMediaWithInfo:) delegate called.")
-        
-        //        for (key, value) in info {
-        //            print("key: \(key) value: \(value)")
-        //        }
         
         //info is a dictionary that contains information about the media (image) the user selected.
         //Subscript the dictionary with the appropriate key to get the image selected by the user
@@ -77,52 +70,29 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
         //display the selected image on the imageView (by setting its image property)
         userimageView.image = image
         
-        //item.image = image
-        
-        //store the selected image in the imageStore (which has a cache to store images)
-        self.userImage = image
         //dismiss the view of imagePicker (that was earlier presented modally)
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func indexHasChanged(_ sender: UISegmentedControl) {
         
-        
-        if sender.selectedSegmentIndex == 0
-        
-        {
-         
-            accoutType = "model"
-            
-        }
-        else
-        {
-     
-         
-            accoutType = "photographer"
-    
-        }
-
+        if sender.selectedSegmentIndex == 0 { accoutType = "model" }
+        else { accoutType = "photographer" }
     }
    
-    
-   
     @IBAction func signUpButton(_ sender: Any) {
-        
-    
-        
-        FIRAuth.auth()?.createUser(withEmail: self.email.text!, password: self.password.text!, completion:{
+        FIRAuth.auth()?.createUser(withEmail: self.email.text!, password: self.password.text!, completion: {
             
             user, error in
             
-            if error != nil{
-                print("sign up error")
+            if error != nil {
+                print("sign up error = \(error!)")
             }
-            else
-            {
+            else {
                 guard let uid = user?.uid else {
                     return
                 }
+                
                 let  imageName = NSUUID().uuidString
                 let storageRef = FIRStorage.storage().reference().child("\(imageName).png")
                 if let uploadData = UIImagePNGRepresentation(self.userImage!){
@@ -140,40 +110,29 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
                         
                     })
                 }
-                
                 print("User created!")
             self.goBackToSignInPage(self)
             }
-            
         })
-        
     }
     
-    private func registerUserIntoDatabasewithUID(uid: String, values:[String: Any])
-    {
+    private func registerUserIntoDatabasewithUID(uid: String, values:[String: Any]) {
         let ref = FIRDatabase.database().reference(fromURL: "https://scout-c335b.firebaseio.com/")
-        
         
         let usersReference = ref.child("users").child(uid)
         
-        usersReference.updateChildValues(values, withCompletionBlock: {(err,ref)
-            in
-            if err != nil{
+        usersReference.updateChildValues(values, withCompletionBlock: { (err,ref) in
+            if err != nil {
                 print(err!)
                 return
             }
             print("user has been added to database")
-            
-            
         })
-        
-        
     }
  
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
     
     @IBAction func goBackToSignInPage(_ sender: Any) {
         
@@ -181,7 +140,4 @@ class ModelPhotographerController: UIViewController,UIImagePickerControllerDeleg
         
         self.dismiss(animated: true, completion: nil)
     }
-    
-   
-    
 }

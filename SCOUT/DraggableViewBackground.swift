@@ -46,22 +46,14 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         
     }
     
-    func fetchUsers()
-    {
+    func fetchUsers() {
         FIRDatabase.database().reference().child("users").observe(.childAdded, with: {(snapshot) in
             
                 let user = User(snapshot: snapshot)
                 self.userr.append(user)
-            
-            
      
                 self.reloadCards(Index: self.userr.count)
-            
-               //print("user afterrrrrrr")
-             //  print(self.userr.count)
-            
-            
-            
+        
         }, withCancel: nil)
     }
 
@@ -83,22 +75,17 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     func createDraggableViewWithDataAtIndex(_ index: NSInteger) -> DraggableView {
         let draggableView = DraggableView(frame: CGRect(x: (self.frame.size.width - CARD_WIDTH)/2, y: (self.frame.size.height - CARD_HEIGHT)/2, width: CARD_WIDTH, height: CARD_HEIGHT))
         
-        
-        print(index)
         print(userr[index].email)
-        if let profileImageUrl = userr[index].userprofileimage{
+        if let profileImageUrl = userr[index].userprofileimage {
             let url = Foundation.URL(string: profileImageUrl)
-           // print(url)
+
             Foundation.URLSession.shared.dataTask(with: url!, completionHandler: { (data,response,error) in
                
                 DispatchQueue.main.async {
-                    if let image = UIImage(data:data!)
-                    {
+                    if let image = UIImage(data:data!) {
                         draggableView.imageView?.image = UIImage(data:data!)
                     }
                 }
-                    //self.userImage.append(UIImage(data: data!)!)
-                
             }).resume()
         }
         
@@ -110,8 +97,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         return draggableView
     }
 
-    func reloadCards(Index: Int)
-    {
+    func reloadCards(Index: Int) {
         let newCard: DraggableView = self.createDraggableViewWithDataAtIndex(Index - 1)
         allCards.append(newCard)
         
@@ -119,23 +105,34 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         self.insertSubview(loadedCards[Index-1], belowSubview: loadedCards[Index - 1])
         
     }
+    
     func loadCards() -> Void {
         if users.count > 0 {
+            
             let numLoadedCardsCap = users.count > MAX_BUFFER_SIZE ? MAX_BUFFER_SIZE : users.count
+            
             for i in 0 ..< users.count {
+                
                 let newCard: DraggableView = self.createDraggableViewWithDataAtIndex(i)
                 allCards.append(newCard)
+                
                 if i < numLoadedCardsCap {
+                    
                     loadedCards.append(newCard)
+                    
                 }
             }
 
             for i in 0 ..< loadedCards.count {
                 if i > 0 {
+                    
                     self.insertSubview(loadedCards[i], belowSubview: loadedCards[i - 1])
+                    
                 } else {
+                    
                     self.addSubview(loadedCards[i])
                 }
+                
                 cardsLoadedIndex = cardsLoadedIndex + 1
             }
         }
@@ -145,9 +142,11 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         loadedCards.remove(at: 0)
 
         if cardsLoadedIndex < allCards.count {
+            
             loadedCards.append(allCards[cardsLoadedIndex])
             cardsLoadedIndex = cardsLoadedIndex + 1
             self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
+            
         }
     }
     
@@ -155,9 +154,11 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         loadedCards.remove(at: 0)
         
         if cardsLoadedIndex < allCards.count {
+            
             loadedCards.append(allCards[cardsLoadedIndex])
             cardsLoadedIndex = cardsLoadedIndex + 1
             self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
+        
         }
     }
 
@@ -165,12 +166,14 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         if loadedCards.count <= 0 {
             return
         }
+        
         let dragView: DraggableView = loadedCards[0]
         dragView.overlayView.setMode(GGOverlayViewMode.ggOverlayViewModeRight)
-        UIView.animate(withDuration: 0.2, animations: {
-            () -> Void in
+        
+        UIView.animate(withDuration: 0.2, animations: { () -> Void in
             dragView.overlayView.alpha = 1
         })
+        
         dragView.rightClickAction()
     }
 
@@ -178,12 +181,14 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         if loadedCards.count <= 0 {
             return
         }
+        
         let dragView: DraggableView = loadedCards[0]
         dragView.overlayView.setMode(GGOverlayViewMode.ggOverlayViewModeLeft)
-        UIView.animate(withDuration: 0.2, animations: {
-            () -> Void in
+        
+        UIView.animate(withDuration: 0.2, animations: { () -> Void in
             dragView.overlayView.alpha = 1
         })
+        
         dragView.leftClickAction()
     }
 }

@@ -14,7 +14,7 @@ enum GGOverlayViewMode {
     case ggOverlayViewModeRight
 }
 
-class OverlayView: UIView{
+class OverlayView: UIView {
     var _mode: GGOverlayViewMode! = GGOverlayViewMode.ggOverlayViewModeLeft
     var imageView: UIImageView!
 
