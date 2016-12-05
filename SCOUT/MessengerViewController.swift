@@ -16,6 +16,7 @@ import FirebaseStorage
 class MessengerViewController: UITableViewController {
     
     var users = [User]()
+    var messageCount: Int!
     
     var databaseRef : FIRDatabaseReference!{
         return FIRDatabase.database().reference()
@@ -30,7 +31,7 @@ class MessengerViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 10
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
