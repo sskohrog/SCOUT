@@ -37,7 +37,6 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.layoutSubviews()
         self.setupView()
         users = []
-        exampleCardLabels = ["first", "second", "third", "fourth","fifth", "last"]
         allCards = []
         loadedCards = []
         userImage = []
@@ -106,38 +105,6 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         
     }
     
-    func loadCards() -> Void {
-        if users.count > 0 {
-            
-            let numLoadedCardsCap = users.count > MAX_BUFFER_SIZE ? MAX_BUFFER_SIZE : users.count
-            
-            for i in 0 ..< users.count {
-                
-                let newCard: DraggableView = self.createDraggableViewWithDataAtIndex(i)
-                allCards.append(newCard)
-                
-                if i < numLoadedCardsCap {
-                    
-                    loadedCards.append(newCard)
-                    
-                }
-            }
-
-            for i in 0 ..< loadedCards.count {
-                if i > 0 {
-                    
-                    self.insertSubview(loadedCards[i], belowSubview: loadedCards[i - 1])
-                    
-                } else {
-                    
-                    self.addSubview(loadedCards[i])
-                }
-                
-                cardsLoadedIndex = cardsLoadedIndex + 1
-            }
-        }
-    }
-
     func cardSwipedLeft(_ card: UIView) -> Void {
         loadedCards.remove(at: 0)
 

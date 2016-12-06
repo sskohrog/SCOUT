@@ -23,6 +23,10 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func wrongUser(sender: AnyObject) {
+        
+    }
 
     @IBAction func CreateAccount(_ sender: Any) {
         FIRAuth.auth()?.createUser(withEmail: Username.text!, password: Password.text!, completion:{
@@ -39,7 +43,7 @@ class LoginViewController: UIViewController {
         })
     }
   
-    @IBAction func NewUserRegester(_ sender: Any) {
+    @IBAction func NewUserRegister(_ sender: Any) {
         self.performSegue(withIdentifier: "signUpSeg", sender: self)
     }
   
@@ -50,6 +54,14 @@ class LoginViewController: UIViewController {
             
             if error != nil {
                 print("Password/User is incorrect!")
+                
+                let warning = UIAlertController(title: "LOGIN ERROR:",
+                                                message: "Incorrect email or password.",
+                                                preferredStyle: UIAlertControllerStyle.alert)
+                let okay = UIAlertAction(title: "Try again", style: .default, handler: nil)
+                warning.addAction(okay)
+                
+                self.present(warning, animated: false, completion: nil)
             } else {
                 _ = self.navigationController?.popViewController(animated: true)
                 
