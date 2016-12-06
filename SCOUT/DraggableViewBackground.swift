@@ -4,7 +4,7 @@
 //
 //  Created by Gao Chao on 4/30/15.
 //  Copyright (c) 2015 gcweb. All rights reserved.
-//
+//  Used by Mohammed Islubee & Sophie Kohrogi
 
 import Foundation
 import UIKit
@@ -25,6 +25,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var messageButton: UIButton!
     var checkButton: UIButton!
     var xButton: UIButton!
+    
     var userImage = [UIImage]()
     var userr = [User]()
 
@@ -32,6 +33,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.init(coder: aDecoder)!
     }
 
+    //initializer of profile boxes
     override init(frame: CGRect) {
         super.init(frame: frame)
         super.layoutSubviews()
@@ -45,6 +47,9 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         
     }
     
+    // fetchUsers()
+    //
+    // Gets all the users in the database and places them inside thr userr array
     func fetchUsers() {
         FIRDatabase.database().reference().child("users").observe(.childAdded, with: {(snapshot) in
             
@@ -56,6 +61,9 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         }, withCancel: nil)
     }
 
+    // setupView() -> Void
+    //
+    // Sets up the view
     func setupView() -> Void {
         self.backgroundColor = UIColor(red: 0.92, green: 0.93, blue: 0.95, alpha: 1)
 
@@ -91,7 +99,6 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         draggableView.username.text = userr[index].username
         draggableView.email.setTitle(userr[index].email, for: .normal)
         draggableView.userType.text = userr[index].usertypee
-        //draggableView.imageView.image = userImage[index]
         draggableView.delegate = self
         return draggableView
     }

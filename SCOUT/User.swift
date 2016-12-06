@@ -2,14 +2,14 @@
 //  User.swift
 //  SCOUT
 //
-//  Created by ahmed waheeb on 11/26/16.
+//  Created by Mohammed Islubee & Sophie Kohrogi on 11/26/16.
 //  Copyright © 2016 ScoutApp. All rights reserved.
 //
+//  User object
 
 import Foundation
 import Firebase
 import FirebaseDatabase
-
 
 struct User {
     

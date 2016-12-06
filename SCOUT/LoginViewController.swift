@@ -1,15 +1,20 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  SCOUT
 //
-//  Created by ahmed waheeb on 11/10/16.
+//  Created by Mohammed Islubee & Sophie Kohrogi on 11/10/16.
 //  Copyright © 2016 ScoutApp. All rights reserved.
 //
+//  The view controller of the login page, where users input
+//  their email and pw to gain access to their account
 
 import UIKit
 import Firebase
+
 class LoginViewController: UIViewController {
 
+    // Outlet for username and password textfields
+    // that user inputs
     @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Password: UITextField!
     let mainController = MainViewController()
@@ -23,12 +28,12 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func wrongUser(sender: AnyObject) {
-        
-    }
 
-    @IBAction func CreateAccount(_ sender: Any) {
+    // LoginAccount(_ sender: Any)
+    //
+    //If user has a valid account, it will log
+    // them into their account, if not error msg
+    @IBAction func LoginAccount(_ sender: Any) {
         FIRAuth.auth()?.createUser(withEmail: Username.text!, password: Password.text!, completion:{
             
             user, error in
@@ -37,16 +42,29 @@ class LoginViewController: UIViewController {
                 self.login()
             }
             else {
-                print("User created!")
+                print("User logged in!")
                 self.login()
             }
         })
     }
   
+    // NewUserRegister(_ sender: Any)
+    //
+    // Registers a new user by segueing to the 
+    // ModelPhotographerViewController which is the sign
+    // up view
     @IBAction func NewUserRegister(_ sender: Any) {
         self.performSegue(withIdentifier: "signUpSeg", sender: self)
     }
   
+    // login()
+    //
+    // Controller of logging user into their account.
+    // If user has correct email and pw, it will
+    // direct user to DISCOVER page.
+    // If user has an incorrect email/pw combo, it will
+    // pop up an alert box warning users that their
+    // combo doesn't work.
     func login(){
         FIRAuth.auth()?.signIn(withEmail: Username.text!, password: Password.text!, completion:{
             

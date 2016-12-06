@@ -2,9 +2,10 @@
 //  Message.swift
 //  SCOUT
 //
-//  Created by Sophie Kohrogi on 12/3/16.
+//  Created by Mohammed Islubee & Sophie Kohrogi on 12/3/16.
 //  Copyright © 2016 ScoutApp. All rights reserved.
 //
+//  Message item
 
 import UIKit
 import Firebase
@@ -17,6 +18,7 @@ class Message: NSObject {
     var ref: FIRDatabaseReference?
     var key: String
     
+    // intializer with only name and profile image
     init(snapshot: FIRDataSnapshot) {
         key = snapshot.key
         

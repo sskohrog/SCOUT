@@ -2,9 +2,10 @@
 //  MessageCell.swift
 //  SCOUT
 //
-//  Created by Sophie Kohrogi on 12/3/16.
+//  Created by Mohammed Islubee & Sophie Kohrogi on 12/3/16.
 //  Copyright © 2016 ScoutApp. All rights reserved.
 //
+//  Sets the font style of the name of message
 
 import UIKit
 

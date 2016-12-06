@@ -2,9 +2,11 @@
 //  UserProfile.swift
 //  SCOUT
 //
-//  Created by ahmed waheeb on 11/26/16.
+//  Created by Mohammed Islubee & Sophie Kohrogi on 11/26/16.
 //  Copyright © 2016 ScoutApp. All rights reserved.
 //
+//  Profile view of the user logged in
+
 import UIKit
 import Foundation
 import Firebase
@@ -15,7 +17,6 @@ import MessageUI
 
 class UserProfileController: UIViewController, MFMailComposeViewControllerDelegate {
  
-
     @IBOutlet weak var usertype: UILabel!
     @IBOutlet weak var email: UIButton!
     @IBOutlet weak var username: UILabel!
@@ -26,10 +27,6 @@ class UserProfileController: UIViewController, MFMailComposeViewControllerDelega
         return FIRDatabase.database().reference()
     }
     
-    var strorageRef : FIRStorageReference!{
-        return FIRStorage.storage().reference()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,12 +35,13 @@ class UserProfileController: UIViewController, MFMailComposeViewControllerDelega
         super.didReceiveMemoryWarning()
     }
     
+    // will load user information into the view
     override func viewDidAppear(_ animated: Bool) {
         if FIRAuth.auth()?.currentUser == nil {
             
         }
         else {
-            databaseRef.child("users/\(FIRAuth.auth()!.currentUser!.uid)").observe(.value, with: {(snapshot) in
+            databaseRef.child("users/\(FIRAuth.auth()!.currentUser!.uid)").observe(.value, with: { (snapshot) in
                 
                 DispatchQueue.main.async {
                     let userr = User(snapshot: snapshot)
@@ -68,6 +66,10 @@ class UserProfileController: UIViewController, MFMailComposeViewControllerDelega
         }
     }
     
+    // sendEmailButton(sender: AnyObject)
+    //
+    // If the user has access to the mail app, they can click
+    // on the email link to automatically produce an email to that user
     @IBAction func sendEmailButton(sender: AnyObject) {
         if MFMailComposeViewController.canSendMail() {
             let email = MFMailComposeViewController()
