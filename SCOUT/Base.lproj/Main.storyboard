@@ -286,7 +286,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="NewUserRegester:" destination="xO8-MM-gyy" eventType="touchUpInside" id="tFG-EB-7Gn"/>
+                                    <action selector="NewUserRegister:" destination="xO8-MM-gyy" eventType="touchUpInside" id="3xl-ch-YWi"/>
                                     <segue destination="L8m-ij-IrW" kind="presentation" identifier="signUpSeg" id="6Ql-19-Zt8"/>
                                 </connections>
                             </button>
